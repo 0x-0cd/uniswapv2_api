@@ -2,7 +2,8 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
-import { BlockListenerModule } from './block-listener/block-listener.module';
+import { BlockModule } from './block/block.module';
+import { ContractModule } from './contract/contract.module';
 import config from './config/config';
 
 @Module({
@@ -11,7 +12,8 @@ import config from './config/config';
       load: [config],
       isGlobal: true,
     }),
-    BlockListenerModule,
+    BlockModule,
+    ContractModule,
   ],
   controllers: [AppController],
   providers: [AppService],
