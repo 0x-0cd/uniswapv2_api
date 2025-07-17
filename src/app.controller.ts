@@ -1,5 +1,7 @@
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
+import { ApiTags } from '@nestjs/swagger';
+@ApiTags('Ping Service')
 
 @Controller()
 export class AppController {
