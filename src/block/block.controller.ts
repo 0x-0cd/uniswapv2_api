@@ -19,4 +19,14 @@ export class BlockController {
     async getLargeTransfer(@Param('blockNumber', ParseIntPipe) blockNumber: number, @Param('threshold') threshold: string) {
         return await this.blockService.getEthTransfer(blockNumber, threshold);
     }
+
+    @Get('gasPrice')
+    async getGasPrice() {
+        return await this.blockService.getGasPrice();
+    }
+
+    @Get('switchGetGasPrice')
+    switchGetGasPrice() {
+        this.blockService.switchGetGasPrice();
+    }
 }
