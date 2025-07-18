@@ -5,4 +5,5 @@ export default () => ({
         rpcProvider: process.env.RPC_PROVIDER || 'Alchemy',
         rpcKey: process.env.RPC_API_KEY || '0',
     },
+    proxyUrl: process.env.PROXY_URL || 'https://127.0.0.1:7899',
 });  

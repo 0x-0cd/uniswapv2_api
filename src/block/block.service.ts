@@ -10,7 +10,7 @@ export class BlockService {
     private cachedGasPrice: string | null = null;
     private lastFetchTime: number = 0;
     private CACHE_TTL_MS: number = 5000;
-    private getGas: boolean = true;
+    private getGas: boolean = false;
 
     constructor(private configService: ConfigService) { }
 
